@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="jquery-1.12.4.js"></script>
+    <style>
+        div{
+            width: 200px;
+            height: 50px;
+            margin: 15px auto;
+            text-align: center;
+            line-height: 50px;
+        }
+    </style>
+</head>
+<body>
+<div>大力金刚</div>
+<div>雾中仙</div>
+<div>须弥</div>
+<div>狂豹</div>
+<div>陈光标</div>
+<div>龙龟</div>
+</body>
+<script>
+    $(function(){
+        $('div:even').css('background','red');
+        $('div:odd').css('background','yellow');
+        var color;
+        $('div').mouseenter(function(){
+        color=this.style.backgroundColor;
+            $(this).css('background','pink');
+        })
+        $('div').mouseleave(function(){
+            $(this).css('background',color);
+        })
+    })
+</script>
+</html>
